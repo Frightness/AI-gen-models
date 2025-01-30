@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Landing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .landing-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+        }
+
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .user-info {
+            margin-bottom: 20px;
+        }
+
+        .try-it-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .try-it-button:hover {
+            background: #45a04a;
+            transform: scale(1.05);
+        }
+
+        .game-over {
+            position: absolute;
+            color: #ff0000;
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        @media (max-width: 800px) {
+            .try-it-button {
+                background: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <h2 class="title">Apple Landing</h2>
+        <p class="subtitle">Your mission: land a real apple on top of a red apple!</p>
+        <p class="user-info">Apple is here to make your day easier! 🍹</p>
+        
+        <button class="try-it-button" onclick="tryTo land()">Try It Now</button>
+
+        <div class="game-over" id="gameOver">
+            You've landed an apple! 🍹
+        </div>
+    </div>
+
+    <script>
+        function tryToLanding() {
+            // This is a placeholder for the actual landing logic
+            alert('Apple landing! 🍹');
+        }
+
+        function land() {
+            // This is a placeholder for the actual landing logic
+            alert('Apple landed successfully!');
+            // Add your landing logic here
+        }
+
+        // Add game over message
+        document.getElementById('gameOver').addEventListener('click', function() {
+            alert('Game Over! Apple is here to make your day easier!');
+            // Add your game over logic here
+        });
+    </script>
+</body>
+</html>
