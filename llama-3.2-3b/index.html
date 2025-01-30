@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Landing Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+       .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       .navbar.logo {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+       .navbar.nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 1rem;
+        }
+       .navbar.nav-links li {
+            margin-bottom: 0.5rem;
+        }
+       .navbar.nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+       .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-size: cover;
+        }
+       .features-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+       .features-section li {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Apple</div>
+            <ul class="nav-links">
+                <li><a href="#" class="navbar.nav-links li">Home</a></li>
+                <li><a href="#" class="navbar.nav-links li">Products</a></li>
+                <li><a href="#" class="navbar.nav-links li">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero-section">
+        <h1>Welcome to Apple</h1>
+        <p>Experience the future of technology with us.</p>
+    </main>
+    <section class="features-section">
+        <h2>Our Features</h2>
+        <ul>
+            <li><img src="apple-watch.jpg" alt="Apple Watch"></li>
+            <li><img src="iphone.jpg" alt="iPhone"></li>
+            <li><img src="macbook-air.jpg" alt="MacBook Air"></li>
+        </ul>
+    </section>
+    <footer class="footer-section">
+        <p>&copy; 2023 Apple Inc.</p>
+    </footer>
+
+    <script>
+        // Add an event listener to the "Home" link that navigates to the home page when clicked
+        document.querySelector('.navbar.nav-links li a:first-child').addEventListener('click', () => {
+            // Navigate to the home page
+            window.location.href = 'home.html';
+        });
+
+        // Add an event listener to the "Products" link that opens a modal window when clicked
+        document.querySelector('.navbar.nav-links li a:last-child').addEventListener('click', () => {
+            // Open the modal window
+            const modalWindow = document.createElement('div');
+            modalWindow.className = 'modal-window';
+            modalWindow.innerHTML = `
+                <h2>Products</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            `;
+            document.body.appendChild(modalWindow);
+        });
+
+        // Add an event listener to the "Watch" image that opens a modal window when clicked
+        document.querySelector('.features-section li img').addEventListener('click', () => {
+            // Open the modal window
+            const modalWindow = document.createElement('div');
+            modalWindow.className = 'modal-window';
+            modalWindow.innerHTML = `
+                <h2>Apple Watch</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            `;
+            document.body.appendChild(modalWindow);
+        });
+    </script>
+</body>
+</html>
